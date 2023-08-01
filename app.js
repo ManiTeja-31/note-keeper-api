@@ -1,4 +1,3 @@
-// src/app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -8,7 +7,6 @@ const port = 4000;
 
 const URL='mongodb+srv://rayuduforever:rayuduforever@cluster0.s8ohfr9.mongodb.net/?retryWrites=true&w=majority';
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
@@ -36,7 +34,6 @@ connection.once('open', () => {
 const notesRouter = require('./routes/notes');
 app.use('/api/notes', notesRouter);
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
