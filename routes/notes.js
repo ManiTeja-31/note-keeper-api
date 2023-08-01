@@ -1,8 +1,7 @@
-// src/routes/notes.js
 const router = require('express').Router();
 const Note = require('../models/note.model');
 
-// GET all notes
+// GET 
 router.get('/', async (req, res) => {
   try {
     const notes = await Note.find();
@@ -12,7 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST a new note
+// POST 
 router.post('/', async (req, res) => {
   const { title, content, pinned } = req.body;
   const newNote = new Note({
@@ -29,7 +28,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// PUT (update) a note
+// PUT 
 router.put('/:id', async (req, res) => {
   const { title, content, pinned } = req.body;
   const { id } = req.params;
@@ -55,7 +54,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// DELETE a note
+// DELETE 
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
 
