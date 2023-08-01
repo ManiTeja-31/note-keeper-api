@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = 4000;
 
-const URL='mongodb+srv://rayuduforever:rayuduforever@cluster0.s8ohfr9.mongodb.net/?retryWrites=true&w=majority';
+const URL='mongodb+srv://<username>:<password>@cluster0.s8ohfr9.mongodb.net/?retryWrites=true&w=majority';
 
 app.use(cors());
 app.use(express.json());
